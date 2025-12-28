@@ -34,3 +34,10 @@ your-repo/
 ├─ .gitignore
 ├─ README.md
 └─ Makefile                # 可选：一键启动/测试/格式化
+
+当前文件夹有 git 无法并入时
+  rm -rf apps/web/.git
+  git add apps/
+
+在 .settings 设置 biome 的位置
+  "biome.lsp.bin": "apps/web/node_modules/.bin/biome"
