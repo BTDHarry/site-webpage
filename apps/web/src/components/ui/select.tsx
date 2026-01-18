@@ -9,6 +9,10 @@ import { UnfoldMoreIcon, Tick02Icon, ArrowUp01Icon, ArrowDown01Icon } from "@hug
 
 const Select = SelectPrimitive.Root
 
+type SelectValueProps = SelectPrimitive.Value.Props & {
+  placeholder?: React.ReactNode
+}
+
 function SelectGroup({ className, ...props }: SelectPrimitive.Group.Props) {
   return (
     <SelectPrimitive.Group
@@ -19,7 +23,7 @@ function SelectGroup({ className, ...props }: SelectPrimitive.Group.Props) {
   )
 }
 
-function SelectValue({ className, ...props }: SelectPrimitive.Value.Props) {
+function SelectValue({ className, ...props }: SelectValueProps) {
   return (
     <SelectPrimitive.Value
       data-slot="select-value"
